@@ -1,0 +1,34 @@
+{
+    "name": "amdadulshakib/installer",
+    "description": "Laravel Installer Package",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Amdadul Shakib",
+          "email": "amdadulshakib@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "amdadulshakib\\installer\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "amdadulshakib\\installer\\InstallerServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^11.0"
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
