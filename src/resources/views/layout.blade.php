@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Installer @hasSection('title') - @yield('title') @endif</title>
-    
-    <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon"> 
-    
+
+    <link rel="icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
-    
+
     <style>
         body {
             background: linear-gradient(to right, #ADD8E6 0%, #E0FFFF 100%);
@@ -72,11 +72,12 @@
         $currentRoute = Route::currentRouteName();
         $steps = [
             'installer.welcome' => ['name' => 'Welcome', 'order' => 1],
-            'installer.requirements' => ['name' => 'Requirements', 'order' => 2],
-            'installer.environment' => ['name' => 'Environment', 'order' => 3],
-            'installer.database' => ['name' => 'Database', 'order' => 4],
-            'installer.admin' => ['name' => 'Admin User', 'order' => 5],
-            'installer.complete' => ['name' => 'Complete', 'order' => 6],
+            'installer.verify' => ['name' => 'Purchase Code', 'order' => 2],
+            'installer.requirements' => ['name' => 'Requirements', 'order' => 3],
+            'installer.environment' => ['name' => 'Environment', 'order' => 4],
+            'installer.database' => ['name' => 'Database', 'order' => 5],
+            'installer.admin' => ['name' => 'Admin User', 'order' => 6],
+            'installer.complete' => ['name' => 'Complete', 'order' => 7],
         ];
         $currentOrder = $steps[$currentRoute]['order'] ?? 1;
     @endphp

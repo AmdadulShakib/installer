@@ -25,6 +25,11 @@
                 <div class="form-text text-muted">Enter your full name or preferred username.</div>
             </div>
             <div class="mb-3">
+                <label for="email" class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="form-control" value="{{ old('username') }}" required>
+                <div class="form-text text-muted">This username will be admin for login.</div>
+            </div>
+            <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}" required>
                 <div class="form-text text-muted">This email will be used for login.</div>
@@ -38,10 +43,10 @@
                 <label for="password_confirmation" class="form-label">Confirm Password</label>
                 <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" required>
             </div>
-            
+
             <div class="d-flex justify-content-between align-items-center mt-4">
-                <a href="{{ route('installer.database') }}" class="btn btn-secondary btn-lg"><i class="bi bi-arrow-left me-2"></i> Back</a>
-                <button type="submit" class="btn btn-primary btn-lg">Create Admin & Finish <i class="bi bi-check-circle-fill ms-2"></i></button>
+                <a href="{{ route('installer.database') }}" class="btn btn-secondary"><i class="bi bi-arrow-left me-2"></i> Back</a>
+                <button type="submit" class="btn btn-primary">Create Admin & Finish <i class="bi bi-check-circle-fill ms-2"></i></button>
             </div>
         </form>
     </div>

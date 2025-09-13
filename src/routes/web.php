@@ -5,6 +5,8 @@ use amdadulshakib\installer\Controllers\InstallController;
 
 Route::middleware(['web', 'install.lock'])->prefix('install')->group(function () {
     Route::get('/', [InstallController::class, 'welcome'])->name('installer.welcome');
+    Route::get('/verify', [InstallController::class, 'verifyForm'])->name('installer.verify');
+    Route::post('/verify', [InstallController::class, 'verifyPurchase'])->name('installer.verify.post');
     Route::get('/requirements', [InstallController::class, 'requirements'])->name('installer.requirements');
     Route::get('/environment', [InstallController::class, 'environmentForm'])->name('installer.environment');
     Route::post('/environment/save', [InstallController::class, 'saveEnvironment'])->name('installer.environment.save');

@@ -33,9 +33,9 @@
             @endphp
 
             @if($allPassed)
-                <a href="{{ route('installer.environment') }}" class="btn btn-primary btn-lg px-5">Next <i class="bi bi-arrow-right ms-2"></i></a>
+                <a href="{{ route('installer.environment') }}" class="btn btn-primary px-5">Next <i class="bi bi-arrow-right ms-2"></i></a>
             @else
-                <button type="button" class="btn btn-secondary btn-lg px-5" disabled>Next <i class="bi bi-arrow-right ms-2"></i></button>
+                <button type="button" class="btn btn-secondary px-5" disabled>Next <i class="bi bi-arrow-right ms-2"></i></button>
                 <p class="text-danger mt-2">All requirements must be passed to proceed.</p>
             @endif
         </div>
