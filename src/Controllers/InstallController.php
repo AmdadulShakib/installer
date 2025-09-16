@@ -155,7 +155,7 @@ class InstallController extends Controller
         }
 
 
-//Artisan::call('migrate', ['--force' => true]); //install er somoy dorkar nai
+//Artisan::call('migrate', ['--force' => true]);
 
         return redirect()->route('installer.admin');
     }
@@ -170,7 +170,7 @@ class InstallController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:100',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email|max:255|unique:admins,email',
             'password' => 'required|min:6|confirmed',
         ]);
 
