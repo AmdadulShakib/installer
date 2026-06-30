@@ -118,7 +118,7 @@ packages/amdadulshakib/Installer/database/database.sql
 
 Place your pre-built SQL dump file here to set up the database during installation.
 
----
+----------
 
 ## ✍️ Usage Steps
 
